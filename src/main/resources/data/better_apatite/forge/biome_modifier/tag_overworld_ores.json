@@ -1,0 +1,9 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#is_overworld",
+  "features": [
+    "better_apatite:apatite_ore",
+    "better_apatite:deepslate_apatite_ore"
+  ],
+  "step": "underground_ores"
+}
