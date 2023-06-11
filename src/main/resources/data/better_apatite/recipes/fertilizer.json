@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#",
+    "A",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:sand"
+    },
+    "A": {
+      "tag": "forge:gems/apatite"
+    }
+  },
+  "result": {
+    "item": "better_apatite:fertilizer",
+    "count": 8
+  }
+}
