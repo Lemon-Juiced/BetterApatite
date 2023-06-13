@@ -155,13 +155,13 @@ dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 
     // JEI
-    compileOnly fg.deobf("mezz.jei:jei-1.20-common-api:14.0.0.5")
-    compileOnly fg.deobf("mezz.jei:jei-1.20-forge-api:14.0.0.5")
-    runtimeOnly fg.deobf("mezz.jei:jei-1.20-common:14.0.0.5")
-    runtimeOnly fg.deobf("mezz.jei:jei-1.20-forge:14.0.0.5")
+    //compileOnly fg.deobf("mezz.jei:jei-1.20-common-api:14.0.0.5")
+    //compileOnly fg.deobf("mezz.jei:jei-1.20-forge-api:14.0.0.5")
+    //runtimeOnly fg.deobf("mezz.jei:jei-1.20-common:14.0.0.5")
+    //runtimeOnly fg.deobf("mezz.jei:jei-1.20-forge:14.0.0.5")
 
     // Lemon Core Dependency
-    runtimeOnly fg.deobf("curse.maven:lemon-core-840168:4579446")
+    runtimeOnly fg.deobf("curse.maven:lemon-core-840168:4585702")
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
