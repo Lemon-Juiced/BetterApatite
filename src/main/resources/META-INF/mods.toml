@@ -8,11 +8,10 @@ version="${mod_version}"
 displayName="${mod_name}"
 logoFile="better_apatite.png"
 authors="${mod_authors}"
-
 description='''${mod_description}'''
 
 [[dependencies.${mod_id}]]
-    modId="forge"
+    modId="neoforge"
     mandatory=true
     versionRange="${neo_version_range}"
     ordering="NONE"
@@ -24,8 +23,14 @@ description='''${mod_description}'''
     ordering="NONE"
     side="BOTH"
 [[dependencies.${mod_id}]]
+    modId="lembrary"
+    mandatory=true
+    versionRange="[1.20.2-1.0.2,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.${mod_id}]]
     modId="lemon_core"
     mandatory=true
-    versionRange="[1.20.1-1.0.22,)"
+    versionRange="[1.20.2-1.1.1,)"
     ordering="NONE"
     side="BOTH"

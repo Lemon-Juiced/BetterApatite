@@ -1,37 +1,33 @@
 package lemon_juice.better_apatite;
 
-import lemon_juice.better_apatite.block.ModBlocks;
-import lemon_juice.better_apatite.creativetab.ModCreativeTab;
-import lemon_juice.better_apatite.item.ModItems;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
-import net.minecraftforge.event.server.ServerStartingEvent;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import lemon_juice.better_apatite.block.BetterApatiteBlocks;
+import lemon_juice.better_apatite.creativetab.BetterApatiteCreativeTab;
+import lemon_juice.better_apatite.item.BetterApatiteItems;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.server.ServerStartingEvent;
 
 @Mod(BetterApatite.MOD_ID)
 public class BetterApatite {
     public static final String MOD_ID = "better_apatite";
 
-    public BetterApatite() {
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-
-        // Register Items
-        ModItems.register(modEventBus);
-        ModBlocks.register(modEventBus);
-
-        // Register Creative Tab
-        ModCreativeTab.register(modEventBus);
-        modEventBus.addListener(ModCreativeTab::registerTabs);
-
+    public BetterApatite(IEventBus modEventBus) {
         modEventBus.addListener(this::commonSetup);
 
-        MinecraftForge.EVENT_BUS.register(this);
+        // Register Items
+        BetterApatiteItems.register(modEventBus);
+        BetterApatiteBlocks.register(modEventBus);
+
+        // Register Creative Tab
+        BetterApatiteCreativeTab.register(modEventBus);
+        modEventBus.addListener(BetterApatiteCreativeTab::registerTabs);
+
+        NeoForge.EVENT_BUS.register(this);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {}
